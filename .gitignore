@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.pyc
+temp_resume.pdf
+temp_jd.pdf
+demo-resumes/
