@@ -1,0 +1,11 @@
+streamlit
+PyMuPDF
+pdf2image
+pytesseract
+spacy
+sentence-transformers
+numpy
+scikit-learn
+pandas
+requests
+python-dotenv
