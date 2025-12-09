@@ -1,19 +1,19 @@
-from sentence_transformers import SentenceTransformer
+import spacy
 import numpy as np
 
-# Load embedding model once
-model = SentenceTransformer("all-MiniLM-L6-v2")
+# Load medium-sized English model (includes embeddings)
+try:
+    nlp = spacy.load("en_core_web_md")
+except:
+    import spacy.cli
+    spacy.cli.download("en_core_web_md")
+    nlp = spacy.load("en_core_web_md")
 
-def embed_text(text: str):
-    """Return embedding vector for input text."""
-    return model.encode([text], convert_to_numpy=True)[0]
+def embed_text(text):
+    doc = nlp(text)
+    return doc.vector
 
-def cosine_similarity(vec1, vec2):
-    """Compute cosine similarity between two vectors."""
-    if vec1 is None or vec2 is None:
-        return 0.0
-
-    v1 = vec1 / np.linalg.norm(vec1)
-    v2 = vec2 / np.linalg.norm(vec2)
-
-    return float(np.dot(v1, v2))
+def cosine_similarity(a, b):
+    a = np.array(a, dtype=float)
+    b = np.array(b, dtype=float)
+    return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
