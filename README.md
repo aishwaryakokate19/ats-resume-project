@@ -1,3 +1,13 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10-blue?logo=python" />
+  <img src="https://img.shields.io/badge/Framework-Streamlit-ff4b4b?logo=streamlit" />
+  <img src="https://img.shields.io/badge/Model-SentenceTransformers-green" />
+  <img src="https://img.shields.io/badge/Status-Deployed-success" />
+  <img src="https://img.shields.io/github/stars/aishwaryakokate19/ats-resume-project?style=social" />
+</p>
+
+
+
 🌟 AI-Powered ATS Resume Matcher
 A complete NLP + Machine Learning project that evaluates resume–job fit using ATS-style scoring
 
