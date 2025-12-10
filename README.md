@@ -1,149 +1,30 @@
-# 🚀 AI-Powered ATS Resume Matcher
+# ⚡ AI-Powered ATS Resume Matcher
 
-A Streamlit-based web application that analyzes **Resume PDFs** and **Job Description PDFs** to compute an **ATS-style match score** using NLP techniques, skill extraction, and sentence embeddings.
+An intelligent system that analyzes your resume and job description using:
 
-🔗 **Live App:** https://ats-resume-project-fgy89ksbfmna8frf8abnjf.streamlit.app/  
-📁 **GitHub Repo:** https://github.com/aishwaryakokate19/ats-resume-project
+- NLP-based skill extraction  
+- Semantic similarity scoring  
+- Embedding-based text comparison  
 
----
-
-## ⭐ Features
-
-- 📄 Upload Resume PDF & Job Description PDF  
-- 🤖 Extract text using PyMuPDF  
-- 🧠 NLP-based skill extraction  
-- 🔍 Sentence Transformer Embeddings  
-- 🎯 Semantic similarity scoring  
-- 📊 Final ATS-style match score  
-- 📉 Skill gap analysis  
-- ☁️ Fully deployed on Streamlit Cloud  
+It outputs an **ATS-style match score** similar to what HR screening tools use.
 
 ---
 
-## 🏗️ Tech Stack
-
-| Component | Technology |
-|----------|------------|
-| Frontend | Streamlit |
-| Backend | Python |
-| NLP | spaCy, Sentence-Transformers |
-| Embeddings | all-MiniLM-L6-v2 |
-| Parsing PDFs | PyMuPDF, pdf2image |
-| Deployment | Streamlit Cloud |
+## 🚀 Live Demo  
+🔗 **https://ats-resume-project-fgy89ksbfmna8frf8abnjf.streamlit.app**
 
 ---
 
-## 📂 Project Structure
+## 🧠 Features
 
-```
-ats-resume-project/
-│
-├── app.py
-├── README.md
-├── requirements.txt
-├── pyproject.toml
-├── .streamlit/
-│   └── runtime.txt
-│   └── config.toml
-│
-├── src/
-│   ├── parsing.py
-│   ├── nlp.py
-│   ├── scoring.py
-│   ├── embeddings.py
-│   ├── utils.py
-│
-└── demo-resumes/
-```
+- Extracts text from PDFs using PyMuPDF  
+- Identifies skills using spaCy NLP  
+- Computes semantic similarity  
+- Calculates final ATS match score  
+- Provides missing skill analysis  
+- Clean, modern Streamlit UI
 
 ---
 
-## ⚙️ Installation (Run Locally)
+## 📁 Project Structure
 
-Clone the repo:
-
-```bash
-git clone https://github.com/aishwaryakokate19/ats-resume-project.git
-cd ats-resume-project
-```
-
-Create virtual environment:
-
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the app:
-
-```bash
-streamlit run app.py
-```
-
----
-
-## 🧪 How It Works
-
-1. **PDF Parsing**  
-   Extract text from PDFs using PyMuPDF.
-
-2. **Skill Extraction**  
-   Extract common professional skills using spaCy patterns + a skills JSON list.
-
-3. **Embedding Generation**  
-   Convert text into numerical vectors using Sentence-Transformers.
-
-4. **Similarity Matching**  
-   Cosine similarity determines semantic relatedness.
-
-5. **Final ATS Score**  
-   Combination of:
-   - Skill overlap
-   - JD missing skills
-   - Semantic similarity
-
----
-
-## 📉 Skill Gap Report
-
-The app highlights:
-
-- Skills in your resume ✔️  
-- Skills missing that the JD requires ❌  
-- Suggestions to improve your match score 📈  
-
----
-
-## 📸 Screenshots
-
-(Add your screenshot here later)
-
----
-
-## 🛠️ To-Do (Future Enhancements)
-
-- Add LLaMA/OpenAI model for smart recommendations  
-- Resume improvement suggestions  
-- Automatic resume rewriting  
-- Multi-page report download as PDF  
-
----
-
-## 👩‍💻 Author
-
-**Aishwarya Kokate**
-
-- 🔗 GitHub: https://github.com/aishwaryakokate19  
-- 💼 Project: ATS Resume Matcher  
-
----
-
-## ⭐ Support
-
-If you like this project, consider giving the repo a **star ⭐ on GitHub**!
