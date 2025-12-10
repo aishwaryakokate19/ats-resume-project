@@ -1,0 +1,11 @@
+STEP 1 — Check status
+git status
+
+✅ STEP 2 — Add the file
+git add README.md
+
+✅ STEP 3 — Commit your update
+git commit -m "Updated README with full documentation"
+
+✅ STEP 4 — Push to GitHub
+git push origin main
